@@ -1,0 +1,15 @@
+import {Coloured, ColorNameComponents} from './Coloured'
+import {Comment} from './Comment'
+import {CommentStyle} from './CommentStyle'
+import {MultiComment} from './MultiComment'
+import {CommentPlaceholder} from './CommentPlaceholder'
+import {CommentLink} from './CommentLink'
+import {CommentReactIcon} from './CommentReactIcon'
+import {RedComment} from './RedComment'
+import {StyledComment} from './StyledComment'
+import {FontComponents, TextDecoration} from './fontComponents'
+import {HtmlComponents} from './htmlComponents'
+import {StyleColour} from './styleColour'
+export {CommentTagType} from './common'
+export {Coloured, ColorNameComponents, Comment, CommentStyle,MultiComment, CommentPlaceholder, CommentLink, CommentReactIcon, RedComment, StyledComment, FontComponents, StyleColour, TextDecoration,HtmlComponents}
+export const commentComponents:Array<{displayName:string}>=[Coloured, CommentPlaceholder,CommentLink, MultiComment, CommentReactIcon, RedComment, StyledComment, Comment, StyleColour, CommentStyle, TextDecoration].concat(Object.values(ColorNameComponents)).concat(Object.values(FontComponents)).concat(Object.values(HtmlComponents))

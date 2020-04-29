@@ -1,0 +1,11 @@
+/* 
+  https://github.com/gilamran/tsc-watch/blob/master/lib/tsc-watch.js 
+  https://raw.githubusercontent.com/gilamran/tsc-watch/master/lib/tsc-watch.js
+
+  onCompilationComplete always run regardless of error
+  then either onFailure or
+
+  only for first run onFirstSuccess
+  then onSuccess
+
+*/

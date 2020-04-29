@@ -1,0 +1,49 @@
+{
+  "name": "react-syntax-highlighter-comments",
+  "version": "1.0.0",
+  "description": "Interceptors and stylers for use with react-syntax-highlighter-renderer-interceptor to assist with styling comments when using react-syntax-highlighter",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "tsc": "node ./node_modules/typescript/bin/tsc -b && ts-node scripts/deleteTempDist",
+    "tsc-final": "npm run clean && npm run tsc",
+    "build-githubpages": "npx webpack",
+    "compile-with-pages": "npm run tsc && npm run build-githubpages",
+    "watch-compile-with-pages": "./node_modules/.bin/tsc-watch --build --onSuccess \"npm run build-githubpages\"",
+    "clean": "ts-node scripts/clean",
+    "generate-textdecoration": "ts-node scripts/generateTextDecoration.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@material-ui/core": "^4.9.12",
+    "@material-ui/icons": "^4.9.1",
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.11.0",
+    "@types/react": "^16.9.32",
+    "@types/react-dom": "^16.9.6",
+    "@types/react-syntax-highlighter": "^11.0.4",
+    "@types/rimraf": "^3.0.0",
+    "@types/webpack-env": "^1.15.1",
+    "jest": "^25.2.7",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-syntax-highlighter": "^12.2.1",
+    "react-syntax-highlighter-editable": "^1.0.0",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^25.3.1",
+    "ts-loader": "^6.2.2",
+    "ts-node": "^8.9.1",
+    "tsc-watch": "^4.2.3",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "string-object-to-object": "^1.0.2"
+  }
+}
