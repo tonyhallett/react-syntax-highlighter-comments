@@ -9,10 +9,10 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
 exports.Comment = function (_a) {
-    var display = _a.commentDisplay, children = _a.children, commentStyle = _a.commentStyleProp, respectStyleProp = _a.respectStyleProp;
-    if (display) {
+    var commentDisplay = _a.commentDisplay, children = _a.children, commentStyleProp = _a.commentStyleProp, respectStyleProp = _a.respectStyleProp;
+    if (commentDisplay) {
         return React.createElement(React.Fragment, null,
-            React.createElement("span", { style: respectStyleProp ? commentStyle : {} }, "// "),
+            React.createElement("span", { style: respectStyleProp ? commentStyleProp : {} }, "// "),
             children);
     }
     return null;

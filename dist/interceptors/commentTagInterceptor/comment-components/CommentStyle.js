@@ -9,10 +9,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
 exports.CommentStyle = function (_a) {
-    var display = _a.commentDisplay, children = _a.children, commentStyle = _a.commentStyleProp;
-    if (display) {
-        return React.createElement(React.Fragment, null,
-            React.createElement("span", { style: commentStyle }, children));
+    var commentDisplay = _a.commentDisplay, children = _a.children, commentStyleProp = _a.commentStyleProp;
+    if (commentDisplay) {
+        return React.createElement("span", { style: commentStyleProp }, children);
     }
     return null;
 };

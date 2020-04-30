@@ -1550,8 +1550,8 @@
         "signature": "403af23be27e3aaf138a59fd3da0e02745d27c839d19861631bdbe2cb4eb9d97"
       },
       "../dist/interceptors/commenttaginterceptor/helpersinternal.d.ts": {
-        "version": "89ffad97cf16dec19f14c6afff021ff2a22593c680ef116b2bc5a3f54afee075",
-        "signature": "89ffad97cf16dec19f14c6afff021ff2a22593c680ef116b2bc5a3f54afee075"
+        "version": "b9ee99e30233cd7cc36a0e1e68a128f82f9a9296fe9375d1f16552d24b5fce9e",
+        "signature": "b9ee99e30233cd7cc36a0e1e68a128f82f9a9296fe9375d1f16552d24b5fce9e"
       },
       "../dist/interceptors/commenttaginterceptor/helpers.d.ts": {
         "version": "30a91fe54b00527685c99217cb1eae5a08e3a8c70facbbe92c8343f42a469e27",
@@ -1562,8 +1562,8 @@
         "signature": "644371424dbbc798efa5964d7d160a2b09d66165c8dd1cbbdc10a9bc72537a9b"
       },
       "../dist/interceptors/commenttaginterceptor/comment-components/coloured.d.ts": {
-        "version": "a13a22e4b732bf6dd5116ad58f8e3f99f594366970d9df8029596554acef6b17",
-        "signature": "a13a22e4b732bf6dd5116ad58f8e3f99f594366970d9df8029596554acef6b17"
+        "version": "43af5d30e4c570a5a4c66bcb1334b4004b8060ee25575f2f5b06ae93388175cb",
+        "signature": "43af5d30e4c570a5a4c66bcb1334b4004b8060ee25575f2f5b06ae93388175cb"
       },
       "../dist/interceptors/commenttaginterceptor/comment-components/comment.d.ts": {
         "version": "03f6f992da582c4d2f4ff2f2af7a95f297dd91319abfc0c596f2780b18f0089c",
@@ -1594,12 +1594,12 @@
         "signature": "926695aa8bc2ad2f62643c414cfe7a2a5e5992faa61eaf16f96d9c24c850811a"
       },
       "../dist/interceptors/commenttaginterceptor/comment-components/redcomment.d.ts": {
-        "version": "df5e0f106da7f8395a173d5cf940cf19d6783aa74aa19201403b2dad0315e0bf",
-        "signature": "df5e0f106da7f8395a173d5cf940cf19d6783aa74aa19201403b2dad0315e0bf"
+        "version": "41c9070290b33795bcdbb04943b90727e52cc7f179f8dad8270bdeb644748e4c",
+        "signature": "41c9070290b33795bcdbb04943b90727e52cc7f179f8dad8270bdeb644748e4c"
       },
       "../dist/interceptors/commenttaginterceptor/comment-components/fontcomponents.d.ts": {
-        "version": "43e45b8dde9a32a1e4d297bf466ead197140d555923548428b919c035be7edf0",
-        "signature": "43e45b8dde9a32a1e4d297bf466ead197140d555923548428b919c035be7edf0"
+        "version": "85de58c980f2705c940f4a1983ffa40f5560024b155365163e00d5701bc173f2",
+        "signature": "85de58c980f2705c940f4a1983ffa40f5560024b155365163e00d5701bc173f2"
       },
       "../dist/interceptors/commenttaginterceptor/comment-components/htmlcomponents.d.ts": {
         "version": "07e76667bc3dafd4f11509db556b49e11e07ebdfb5a01bb09da2f3e91a3fe5bd",
@@ -1706,15 +1706,19 @@
         "signature": "511ed1620a1d6f5b86621e13d4ebffeecfb6e09b785abc2f0c5097b63efa7655"
       },
       "./src/components/democommenttaginterceptor/examples/common.tsx": {
-        "version": "458c08e54502763e93da9dc1ff0501442c6dfd173e70290923388794659c2227",
-        "signature": "fc12da1387cbd63d08ba72fb188a56858d5599fae4b0b54490a3adb38997db78"
+        "version": "0993cbaf313ef383eae89c6b07b66fbcf5677f5f890e3db43fc49088d2815565",
+        "signature": "3f621be67e68ab6106d6e39a6e65b39f1c5c3a37780c12d013f5a0869be20edf"
       },
       "./src/components/democommenttaginterceptor/examples/democommentreacticon.tsx": {
         "version": "6b21f14f8b8b58ae6825fae964cc6e01da5224b2146f16f521782b744353c088",
         "signature": "0cac0eb6862c5008cd5a37d17e43740104d8fa7ff3c119da6d35b8920b094068"
       },
+      "./src/components/democommenttaginterceptor/examples/teststyles.tsx": {
+        "version": "1a938e70ca20accc4c4d9818e7c4e7813219437dbdc991be7ed21ad5930983c4",
+        "signature": "7a02da466f7b1db95e956cf234832d058eadc90d59720eed57db39cddc228412"
+      },
       "./src/components/democommenttaginterceptor/democommenttaginterceptor.tsx": {
-        "version": "0651c0d1bde5fd8b5bbec450f187395e38ab9ff7e7e7209ff4b33376a2247c26",
+        "version": "868be4571cc837fab33642846d4ccb8f8021ae18a1656120a00735581d754f5a",
         "signature": "7ab2a784cc56a5b61581f591cf48dd5a89f157f3ea7d8e91730da8343b00a345"
       },
       "./src/components/demorshcomment.tsx": {
@@ -5379,6 +5383,7 @@
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../dist/interceptors/commenttaginterceptor/comment-components/coloured.d.ts": [
+        "../node_modules/@types/react/index.d.ts",
         "../dist/helpers/colornames.d.ts",
         "../dist/interceptors/commenttaginterceptor/helpers.d.ts",
         "../dist/interceptors/commenttaginterceptor/comment-components/common.d.ts",
@@ -5716,11 +5721,22 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "./src/components/democommenttaginterceptor/examples/teststyles.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "./src/components/democommenttaginterceptor/examples/common.tsx",
+        "../dist/index.d.ts",
+        "../node_modules/@material-ui/core/typography/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "./src/components/democommenttaginterceptor/democommenttaginterceptor.tsx": [
         "../node_modules/@types/react/index.d.ts",
         "../node_modules/@material-ui/core/typography/index.d.ts",
         "./src/components/common.tsx",
         "./src/components/democommenttaginterceptor/examples/democommentreacticon.tsx",
+        "./src/components/democommenttaginterceptor/examples/teststyles.tsx",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -9718,6 +9734,7 @@
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../dist/interceptors/commenttaginterceptor/comment-components/coloured.d.ts": [
+        "../node_modules/@types/react/index.d.ts",
         "../dist/helpers/colornames.d.ts",
         "../dist/interceptors/commenttaginterceptor/helpers.d.ts",
         "../dist/interceptors/commenttaginterceptor/comment-components/common.d.ts",
@@ -10029,6 +10046,9 @@
         "../dist/index.d.ts"
       ],
       "./src/components/democommenttaginterceptor/examples/democommentreacticon.tsx": [
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "./src/components/democommenttaginterceptor/examples/teststyles.tsx": [
         "../node_modules/@types/react/index.d.ts"
       ],
       "./src/components/demorshcomment.tsx": [
@@ -11018,10 +11038,7 @@
       "../dist/interceptors/commenttaginterceptor/interceptor/getcomponentdetails.d.ts",
       "../dist/interceptors/commenttaginterceptor/interceptor/getproperties.d.ts",
       "../dist/interceptors/commenttaginterceptor/interceptor/index.d.ts",
-      "../dist/interceptors/commenttaginterceptor/helpersinternal.d.ts",
-      "../dist/interceptors/commenttaginterceptor/helpers.d.ts",
       "../dist/interceptors/commenttaginterceptor/comment-components/common.d.ts",
-      "../dist/interceptors/commenttaginterceptor/comment-components/coloured.d.ts",
       "../dist/interceptors/commenttaginterceptor/comment-components/comment.d.ts",
       "../dist/interceptors/commenttaginterceptor/comment-components/commentstyle.d.ts",
       "../dist/interceptors/commenttaginterceptor/comment-components/multicomment.d.ts",
@@ -11030,11 +11047,8 @@
       "../dist/interceptors/commenttaginterceptor/comment-components/commentreacticon.d.ts",
       "../dist/interceptors/commenttaginterceptor/comment-components/styledcomment.d.ts",
       "../dist/interceptors/commenttaginterceptor/comment-components/redcomment.d.ts",
-      "../dist/interceptors/commenttaginterceptor/comment-components/fontcomponents.d.ts",
       "../dist/interceptors/commenttaginterceptor/comment-components/htmlcomponents.d.ts",
       "../dist/interceptors/commenttaginterceptor/comment-components/stylecolour.d.ts",
-      "../dist/interceptors/commenttaginterceptor/comment-components/index.d.ts",
-      "../dist/interceptors/commenttaginterceptor/index.d.ts",
       "../dist/interceptors/commentsplitters.d.ts",
       "../dist/interceptors/nodeobjectpropertyattacher.d.ts",
       "../dist/interceptors/links/createmdlinklinkmatcher.d.ts",
@@ -11050,26 +11064,15 @@
       "../dist/stylers/commentcharsstyler.d.ts",
       "../dist/commentcomponents/commentlinksandcolours.d.ts",
       "../dist/commentcomponents/commentlinksclasses.d.ts",
-      "../dist/commentcomponents/syntaxhighlightercomments.d.ts",
       "../dist/commentcomponents/syntaxhighlighterstyledcomments.d.ts",
       "../dist/commentcomponents/syntaxhighlighterxxxcomments.d.ts",
-      "../dist/commentcomponents/index.d.ts",
-      "../dist/index.d.ts",
       "../node_modules/react-syntax-highlighter-editable/dist/index.d.ts",
-      "./src/components/democommenttaginterceptor/examples/common.tsx",
-      "./src/components/democommenttaginterceptor/examples/democommentreacticon.tsx",
       "./src/components/democommenttaginterceptor/democommenttaginterceptor.tsx",
       "./src/components/demorshcomment.tsx",
       "./src/index.tsx",
       "./src/components/demotypecomponent.tsx",
       "./src/components/controlhooks.tsx",
-      "./src/components/democommentlinksandclasses.tsx",
-      "./src/components/democommentlinksandcolours.tsx",
-      "./src/components/democustomrenderer.tsx",
       "./src/components/demointro.tsx",
-      "./src/components/demostyledcomments.tsx",
-      "./src/components/demosyntaxhighlightercomments.tsx",
-      "./src/components/demoxxxcomments.tsx",
       "../node_modules/@babel/types/lib/index.d.ts",
       "../node_modules/@types/babel__generator/index.d.ts",
       "../node_modules/@types/babel__traverse/index.d.ts",
@@ -11147,7 +11150,25 @@
       "../node_modules/@types/webpack-env/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "./src/components/common.tsx"
+      "../dist/interceptors/commenttaginterceptor/helpersinternal.d.ts",
+      "../dist/interceptors/commenttaginterceptor/comment-components/fontcomponents.d.ts",
+      "../dist/interceptors/commenttaginterceptor/helpers.d.ts",
+      "../dist/interceptors/commenttaginterceptor/comment-components/coloured.d.ts",
+      "../dist/interceptors/commenttaginterceptor/comment-components/index.d.ts",
+      "../dist/interceptors/commenttaginterceptor/index.d.ts",
+      "../dist/commentcomponents/syntaxhighlightercomments.d.ts",
+      "../dist/commentcomponents/index.d.ts",
+      "../dist/index.d.ts",
+      "./src/components/common.tsx",
+      "./src/components/democommenttaginterceptor/examples/common.tsx",
+      "./src/components/democommenttaginterceptor/examples/democommentreacticon.tsx",
+      "./src/components/democommenttaginterceptor/examples/teststyles.tsx",
+      "./src/components/democommentlinksandclasses.tsx",
+      "./src/components/democommentlinksandcolours.tsx",
+      "./src/components/democustomrenderer.tsx",
+      "./src/components/demostyledcomments.tsx",
+      "./src/components/demosyntaxhighlightercomments.tsx",
+      "./src/components/demoxxxcomments.tsx"
     ]
   },
   "version": "3.8.3"

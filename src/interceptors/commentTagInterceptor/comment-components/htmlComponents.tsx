@@ -5,18 +5,26 @@ import { CommentTagType } from "./common";
 const htmlElements:Array<keyof JSX.IntrinsicElements> = ['span','div'];
 
 function wrapComponent<T extends keyof JSX.IntrinsicElements>(htmlElement:T){
-  const Component:React.FC<CommentTagProps & JSX.IntrinsicElements[T]> = ({commentDisplay: display, children,commentStyleProp: commentStyle,respectStyleProp,...other}) => {
-    if(display){
-      const baseStyle:React.CSSProperties = respectStyleProp && commentStyle?commentStyle:{};
+  const Component:React.FC<CommentTagProps & JSX.IntrinsicElements[T]> = (
+    {
+      commentDisplay, 
+      children,
+      commentStyleProp,
+      respectStyleProp,
+      ...other}) => {
+    if(commentDisplay){
+      const baseStyle:React.CSSProperties = respectStyleProp && commentStyleProp?commentStyleProp:{};
       const originalStyle = other.style;
-
-      const actualStyle = {...baseStyle,...originalStyle}
-      return React.createElement(htmlElement,{...other,style:actualStyle},children);
+      const {mergeStyle,otherProps} = other as any; 
+      const actualStyle = {...baseStyle,...mergeStyle,...originalStyle}
+      
+      return React.createElement(htmlElement,{...otherProps,style:actualStyle},children);
     }
     return null;
   }
   const capitalizedName = htmlElement.substr(0,1).toUpperCase() + htmlElement.substr(1);
   Component.displayName=capitalizedName;
+  (Component as any).acceptsMergeStyle = true;
   return Component;
 }
 

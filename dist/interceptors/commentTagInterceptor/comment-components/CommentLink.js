@@ -20,8 +20,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
 exports.CommentLink = function (_a) {
-    var display = _a.commentDisplay, _b = _a.linkProps, linkProps = _b === void 0 ? {} : _b, _c = _a.linkStyleProp, linkStyleProp = _c === void 0 ? {} : _c, children = _a.children, respectStyleProp = _a.respectStyleProp;
-    if (display) {
+    var commentDisplay = _a.commentDisplay, _b = _a.linkProps, linkProps = _b === void 0 ? {} : _b, _c = _a.linkStyleProp, linkStyleProp = _c === void 0 ? {} : _c, children = _a.children, respectStyleProp = _a.respectStyleProp;
+    if (commentDisplay) {
         var linkPropsStyle = linkProps.style || {};
         var mergedStyle = __assign(__assign({}, (respectStyleProp ? linkStyleProp : {})), linkPropsStyle);
         return React.createElement("a", __assign({}, linkProps, { style: mergedStyle }), children);

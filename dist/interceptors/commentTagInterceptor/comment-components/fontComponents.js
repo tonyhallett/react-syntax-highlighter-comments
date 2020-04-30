@@ -79,9 +79,9 @@ function getTextDecorationLine(shortline) {
     }
 }
 exports.TextDecoration = function (_a) {
-    var display = _a.commentDisplay, children = _a.children, commentStyle = _a.commentStyleProp, respectStyleProp = _a.respectStyleProp, th = _a.th, s = _a.s, _b = _a.l, l = _b === void 0 ? 'ul' : _b, _c = _a.isSpan, isSpan = _c === void 0 ? true : _c, c = _a.c;
-    if (display) {
-        var baseStyle = respectStyleProp && commentStyle ? commentStyle : {};
+    var commentDisplay = _a.commentDisplay, children = _a.children, commentStyleProp = _a.commentStyleProp, respectStyleProp = _a.respectStyleProp, th = _a.th, s = _a.s, _b = _a.l, l = _b === void 0 ? 'ul' : _b, _c = _a.isSpan, isSpan = _c === void 0 ? true : _c, c = _a.c;
+    if (commentDisplay) {
+        var baseStyle = respectStyleProp && commentStyleProp ? commentStyleProp : {};
         var componentStyle = {
             textDecorationStyle: s,
             textDecorationLine: getTextDecorationLine(l),

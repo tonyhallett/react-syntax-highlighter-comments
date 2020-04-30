@@ -2,11 +2,20 @@ import * as React from "react";
 import { StyledComment, StyledCommentProps } from "./StyledComment";
 import { CommentTagType} from './common';
 
-export type RedCommentProps = Omit<StyledCommentProps,'style'>;
-export const RedComment:CommentTagType<RedCommentProps> = ({commentDisplay: display, comment, children, tab, respectStyleProp,commentStyleProp: commentStyle}) => {
+export const RedComment:CommentTagType<StyledCommentProps> = (
+  {
+    commentDisplay, 
+    comment, 
+    children, 
+    tab, 
+    respectStyleProp,
+    commentStyleProp,
+    style = {}
+  }) => {
   let redComment = comment?comment:children;
-  if(display && redComment){
-    return <StyledComment commentDisplay respectStyleProp={respectStyleProp} commentStyleProp={commentStyle} comment={redComment as any} tab={tab} style={{color:'red'}}/>
+  if(commentDisplay && redComment){
+    style.color = 'red';
+    return <StyledComment commentDisplay respectStyleProp={respectStyleProp} commentStyleProp={commentStyleProp} comment={redComment as any} tab={tab} style={style}/>
   }
   return null;
 }

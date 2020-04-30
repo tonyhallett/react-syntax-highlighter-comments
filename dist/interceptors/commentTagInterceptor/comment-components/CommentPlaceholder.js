@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CommentPlaceholder = function (_a) {
-    var display = _a.commentDisplay, children = _a.children;
-    if (display && children) {
+    var commentDisplay = _a.commentDisplay, children = _a.children;
+    if (commentDisplay && children) {
         return children;
     }
     return null;

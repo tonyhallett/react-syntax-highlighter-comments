@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ComponentProvider } from "../../../../../src";
 export declare const ExampleCode: React.FC<{
-    additionalStyle?: React.CSSProperties;
+    additionalStyle?: Record<string, React.CSSProperties>;
     commentTagProvider: ComponentProvider;
     respectStyleProp?: boolean;
     rows?: number;

@@ -10,10 +10,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
 var StyledComment_1 = require("./StyledComment");
 exports.RedComment = function (_a) {
-    var display = _a.commentDisplay, comment = _a.comment, children = _a.children, tab = _a.tab, respectStyleProp = _a.respectStyleProp, commentStyle = _a.commentStyleProp;
+    var commentDisplay = _a.commentDisplay, comment = _a.comment, children = _a.children, tab = _a.tab, respectStyleProp = _a.respectStyleProp, commentStyleProp = _a.commentStyleProp, _b = _a.style, style = _b === void 0 ? {} : _b;
     var redComment = comment ? comment : children;
-    if (display && redComment) {
-        return React.createElement(StyledComment_1.StyledComment, { commentDisplay: true, respectStyleProp: respectStyleProp, commentStyleProp: commentStyle, comment: redComment, tab: tab, style: { color: 'red' } });
+    if (commentDisplay && redComment) {
+        style.color = 'red';
+        return React.createElement(StyledComment_1.StyledComment, { commentDisplay: true, respectStyleProp: respectStyleProp, commentStyleProp: commentStyleProp, comment: redComment, tab: tab, style: style });
     }
     return null;
 };

@@ -10,11 +10,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
 var common_1 = require("./common");
 exports.MultiComment = function (_a) {
-    var display = _a.commentDisplay, children = _a.children, _b = _a.tab, tab = _b === void 0 ? 0 : _b, commentStyle = _a.commentStyleProp, respectStyleProp = _a.respectStyleProp;
-    if (display && Array.isArray(children)) {
+    var commentDisplay = _a.commentDisplay, children = _a.children, _b = _a.tab, tab = _b === void 0 ? 0 : _b, commentStyleProp = _a.commentStyleProp, respectStyleProp = _a.respectStyleProp;
+    if (commentDisplay && Array.isArray(children)) {
         var spacing = common_1.getSpacing(tab);
         var commentSpacing_1 = "   " + spacing;
-        var style = respectStyleProp && commentStyle ? commentStyle : {};
+        var style = respectStyleProp && commentStyleProp ? commentStyleProp : {};
         return React.createElement(React.Fragment, null,
             React.createElement("span", { style: style }, "/*"),
             children && children.map(function (c, i) { return React.createElement("div", { key: i },

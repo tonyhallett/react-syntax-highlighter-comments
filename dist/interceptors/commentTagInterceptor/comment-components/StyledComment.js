@@ -21,31 +21,31 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
 var common_1 = require("./common");
 exports.StyledComment = function (_a) {
-    var display = _a.commentDisplay, comment = _a.comment, style = _a.style, _b = _a.tab, tab = _b === void 0 ? 0 : _b, children = _a.children, commentStyle = _a.commentStyleProp, respectStyleProp = _a.respectStyleProp;
+    var commentDisplay = _a.commentDisplay, comment = _a.comment, style = _a.style, _b = _a.tab, tab = _b === void 0 ? 0 : _b, children = _a.children, commentStyleProp = _a.commentStyleProp, respectStyleProp = _a.respectStyleProp;
     var commentStringOrArray = comment ? comment : children;
     var spacing = common_1.getSpacing(tab);
     var commentSpacing = "   " + spacing;
-    if (display) {
-        var baseStyle = respectStyleProp && commentStyle ? commentStyle : {};
-        var mergedStyle_1 = __assign(__assign({}, baseStyle), style);
-        // for now not styling the comments differently
+    if (commentDisplay) {
+        var baseStyle = respectStyleProp && commentStyleProp ? commentStyleProp : {};
+        var actualStyle_1 = __assign(__assign({}, baseStyle), style);
+        // for now not styling the comment chars differently
         if (Array.isArray(commentStringOrArray)) {
             if (commentStringOrArray.length > 0) {
                 return React.createElement(React.Fragment, null,
-                    React.createElement("span", { style: mergedStyle_1 }, "/*"),
+                    React.createElement("span", { style: actualStyle_1 }, "/*"),
                     commentStringOrArray.map(function (line, i) {
                         return React.createElement("div", { key: i },
                             React.createElement("span", null, commentSpacing),
-                            React.createElement("span", { style: mergedStyle_1 }, line));
+                            React.createElement("span", { style: actualStyle_1 }, line));
                     }),
                     React.createElement("div", null,
                         React.createElement("span", null, spacing),
-                        React.createElement("span", { style: mergedStyle_1 }, "*/")));
+                        React.createElement("span", { style: actualStyle_1 }, "*/")));
             }
             return null;
         }
         else {
-            return React.createElement("span", { style: mergedStyle_1 }, "// " + commentStringOrArray);
+            return React.createElement("span", { style: actualStyle_1 }, "// " + commentStringOrArray);
         }
     }
     return null;

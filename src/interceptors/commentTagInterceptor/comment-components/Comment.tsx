@@ -1,9 +1,13 @@
 import * as React from "react";
 import { CommentTagType } from "./common";
-export const Comment:CommentTagType = ({commentDisplay: display, children,commentStyleProp: commentStyle, respectStyleProp })=>{
-  if(display){
+export const Comment:CommentTagType = ({
+  commentDisplay,
+  children,
+  commentStyleProp, 
+  respectStyleProp })=>{
+  if(commentDisplay){
     return <>
-      <span style={respectStyleProp?commentStyle:{}}>// </span> 
+      <span style={respectStyleProp?commentStyleProp:{}}>// </span> 
       {children}
     </>
   }

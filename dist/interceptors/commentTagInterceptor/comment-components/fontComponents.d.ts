@@ -23829,13 +23829,13 @@ export declare const FontComponents: import("../helpersInternal").DisplayReactFC
         fontStyle: string | undefined;
     };
     Lighter: {
-        fontWeight: number | "-moz-initial" | "inherit" | "initial" | "revert" | "unset" | "normal" | "bold" | "bolder" | "lighter" | undefined;
+        fontWeight: number | "bold" | "-moz-initial" | "inherit" | "initial" | "revert" | "unset" | "normal" | "bolder" | "lighter" | undefined;
     };
     Bold: {
-        fontWeight: number | "-moz-initial" | "inherit" | "initial" | "revert" | "unset" | "normal" | "bold" | "bolder" | "lighter" | undefined;
+        fontWeight: number | "bold" | "-moz-initial" | "inherit" | "initial" | "revert" | "unset" | "normal" | "bolder" | "lighter" | undefined;
     };
     Bolder: {
-        fontWeight: number | "-moz-initial" | "inherit" | "initial" | "revert" | "unset" | "normal" | "bold" | "bolder" | "lighter" | undefined;
+        fontWeight: number | "bold" | "-moz-initial" | "inherit" | "initial" | "revert" | "unset" | "normal" | "bolder" | "lighter" | undefined;
     };
     XXSmall: {
         fontSize: string | number | undefined;

@@ -4,7 +4,7 @@ import { atomDark as prismStyle } from "react-syntax-highlighter/dist/esm/styles
 import { SyntaxHighlighterComments, ComponentProvider } from "../../../../../src";
 import { Prism } from "react-syntax-highlighter";
 
-export const ExampleCode:React.FC<{additionalStyle?:React.CSSProperties, commentTagProvider:ComponentProvider,respectStyleProp?:boolean,rows?:number,columns?:number}>=({children,additionalStyle,commentTagProvider,respectStyleProp,rows=2,columns=100}) => {
+export const ExampleCode:React.FC<{additionalStyle?:Record<string,React.CSSProperties>, commentTagProvider:ComponentProvider,respectStyleProp?:boolean,rows?:number,columns?:number}>=({children,additionalStyle,commentTagProvider,respectStyleProp,rows=2,columns=100}) => {
 
   return <EditableRSH 
     initialCode={children as string} 

@@ -5,7 +5,7 @@ export { DisplayReactFCObject} from './helpersInternal'
 
 // todo - resolve <T extends {[key:string]:React.CSSProperties}>
 export function generateStylePropAwareComponents<T extends {[key:string]:Record<string,any>}>(componentDetails:T,span=true):DisplayReactFCObject<T>{
-  return generateStylePropAwareComponentsInternal(componentDetails,span,false);
+  return generateStylePropAwareComponentsInternal(componentDetails,span,false,false);
 }
 
 

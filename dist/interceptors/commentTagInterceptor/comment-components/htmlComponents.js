@@ -33,17 +33,19 @@ var React = __importStar(require("react"));
 var htmlElements = ['span', 'div'];
 function wrapComponent(htmlElement) {
     var Component = function (_a) {
-        var display = _a.commentDisplay, children = _a.children, commentStyle = _a.commentStyleProp, respectStyleProp = _a.respectStyleProp, other = __rest(_a, ["commentDisplay", "children", "commentStyleProp", "respectStyleProp"]);
-        if (display) {
-            var baseStyle = respectStyleProp && commentStyle ? commentStyle : {};
+        var commentDisplay = _a.commentDisplay, children = _a.children, commentStyleProp = _a.commentStyleProp, respectStyleProp = _a.respectStyleProp, other = __rest(_a, ["commentDisplay", "children", "commentStyleProp", "respectStyleProp"]);
+        if (commentDisplay) {
+            var baseStyle = respectStyleProp && commentStyleProp ? commentStyleProp : {};
             var originalStyle = other.style;
-            var actualStyle = __assign(__assign({}, baseStyle), originalStyle);
-            return React.createElement(htmlElement, __assign(__assign({}, other), { style: actualStyle }), children);
+            var _b = other, mergeStyle = _b.mergeStyle, otherProps = _b.otherProps;
+            var actualStyle = __assign(__assign(__assign({}, baseStyle), mergeStyle), originalStyle);
+            return React.createElement(htmlElement, __assign(__assign({}, otherProps), { style: actualStyle }), children);
         }
         return null;
     };
     var capitalizedName = htmlElement.substr(0, 1).toUpperCase() + htmlElement.substr(1);
     Component.displayName = capitalizedName;
+    Component.acceptsMergeStyle = true;
     return Component;
 }
 exports.HtmlComponents = {};

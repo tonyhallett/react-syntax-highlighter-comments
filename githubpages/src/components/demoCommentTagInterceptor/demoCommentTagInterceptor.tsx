@@ -2,6 +2,7 @@ import * as React from "react";
 import Typography from '@material-ui/core/Typography';
 import { ComponentApi, InterceptorApi, Expandable } from "../common";
 import { DemoCommentReactIcon } from "./examples/demoCommentReactIcon";
+import { TestStyles } from "./examples/testStyles";
 
 function getInitialCode(){
   return `
@@ -247,7 +248,8 @@ return <ComponentApi>{props}</ComponentApi>
 function Demos(){
   return <Expandable header='Demos'>
     <>
-      <BuiltInComponentsDemos/>
+      <TestStyles/>
+      {/* <BuiltInComponentsDemos/> */}
     </>
     </Expandable>
 }

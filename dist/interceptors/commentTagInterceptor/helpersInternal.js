@@ -19,17 +19,23 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
-function generateStylePropAwareComponentsInternal(componentDetails, span, acceptsMergeStyle) {
+function generateStylePropAwareComponentsInternal(componentDetails, span, acceptsMergeStyle, mergeStyleToChildren) {
     if (span === void 0) { span = true; }
     if (acceptsMergeStyle === void 0) { acceptsMergeStyle = true; }
+    if (mergeStyleToChildren === void 0) { mergeStyleToChildren = true; }
     var components = {};
     Object.keys(componentDetails).forEach(function (componentName) {
         var componentStyle = componentDetails[componentName];
         var Component = function (_a) {
-            var display = _a.commentDisplay, children = _a.children, commentStyle = _a.commentStyleProp, respectStyleProp = _a.respectStyleProp, mergeStyle = _a.mergeStyle;
-            if (display) {
-                var baseStyle = respectStyleProp && commentStyle ? commentStyle : {};
-                var actualStyle = __assign(__assign(__assign({}, baseStyle), componentStyle), mergeStyle);
+            var commentDisplay = _a.commentDisplay, children = _a.children, commentStyleProp = _a.commentStyleProp, respectStyleProp = _a.respectStyleProp, mergeStyle = _a.mergeStyle, // as used by Coloured and ColourNameComponents
+            style = _a.style // to more likely be supplied by the ComponentProvider
+            ;
+            if (commentDisplay) {
+                if (!acceptsMergeStyle) {
+                    mergeStyle = {};
+                }
+                var baseStyle = respectStyleProp && commentStyleProp ? commentStyleProp : {};
+                var actualStyle = __assign(__assign(__assign(__assign({}, baseStyle), mergeStyle), style), componentStyle);
                 if (span) {
                     return React.createElement("span", { style: actualStyle }, children ? children : '');
                 }

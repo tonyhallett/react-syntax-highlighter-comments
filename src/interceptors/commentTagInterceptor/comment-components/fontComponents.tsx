@@ -86,9 +86,19 @@ function getTextDecorationLine(shortline:Shortline){
       return `${underline} ${overline} ${lineThrough}`
   } 
 }
-export const TextDecoration:CommentTagType<TextDecorationOnlyProps> = ({commentDisplay: display, children,commentStyleProp: commentStyle,respectStyleProp,th,s,l='ul',isSpan=true,c}) => {
-  if(display){
-    const baseStyle:React.CSSProperties = respectStyleProp && commentStyle?commentStyle:{};
+export const TextDecoration:CommentTagType<TextDecorationOnlyProps> = (
+  {
+    commentDisplay, 
+    children,
+    commentStyleProp,
+    respectStyleProp,
+    th,
+    s,
+    l='ul',
+    isSpan=true,
+    c}) => {
+  if(commentDisplay){
+    const baseStyle:React.CSSProperties = respectStyleProp && commentStyleProp?commentStyleProp:{};
     const componentStyle = {
       textDecorationStyle:s,
       textDecorationLine: getTextDecorationLine(l),

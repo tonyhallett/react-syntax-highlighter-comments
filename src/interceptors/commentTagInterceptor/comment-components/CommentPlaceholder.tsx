@@ -1,6 +1,6 @@
 import { CommentTagType } from "./common";
-export const CommentPlaceholder: CommentTagType=({commentDisplay: display, children})=>{
-  if(display && children){
+export const CommentPlaceholder: CommentTagType=({commentDisplay, children})=>{
+  if(commentDisplay && children){
     return children;
       
   }
