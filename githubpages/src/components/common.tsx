@@ -8,7 +8,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import { CommentLinksAndColours } from "../../../src";
 
-const Api:React.FC<{header:string}> = ({children,header})=>{
+export const Api:React.FC<{header:string}> = ({children,header})=>{
   return <Expandable header={header}>
     <CommentLinksAndColours 
         commentLinks={false} 
@@ -38,4 +38,13 @@ export const Expandable:React.FC<{header:string}> = ({header, children})=>{
           </ExpansionPanelSummary>
               {children}
           </ExpansionPanel>
+}
+
+export const Em33Container:React.FC = ({children}) =>{
+  return <div style={{width:'33em'}}>{children}</div>
+}
+export const Em33Typography:React.FC = ({children}) => {
+  return <Em33Container>
+    <Typography gutterBottom>{children}</Typography>
+  </Em33Container>
 }

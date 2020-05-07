@@ -6,4 +6,5 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./comment-components"));
 __export(require("./interceptor"));
 __export(require("./helpers"));
+__export(require("./createComponentProvider"));
 //# sourceMappingURL=index.js.map

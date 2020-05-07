@@ -22,13 +22,13 @@ function wrapComponent<T extends keyof JSX.IntrinsicElements>(htmlElement:T){
     }
     return null;
   }
-  const capitalizedName = htmlElement.substr(0,1).toUpperCase() + htmlElement.substr(1);
-  Component.displayName=capitalizedName;
+  Component.displayName = htmlElement;
   (Component as any).acceptsMergeStyle = true;
   return Component;
 }
 
 type CommentHtmlComponents = {[k in keyof JSX.IntrinsicElements]:CommentTagType<JSX.IntrinsicElements[k]>};
+
 
 export const HtmlComponents:CommentHtmlComponents = {} as any;
 

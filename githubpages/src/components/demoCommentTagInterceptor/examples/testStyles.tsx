@@ -9,8 +9,12 @@ const code =`
 <Red><span>span</span></Red>
 <Italic>Italic</Italic>
 
+<XXXLarge><Red>large</Red></XXXLarge>
 <XXXLarge><Bold>large</Bold></XXXLarge>
 <Bold><XXXLarge>bold</XXXLarge></Bold>
+<Red><Bold>Red bold</Bold><Italic>Red italic</Italic><Yellow>Yellow</Yellow></Red>
+
+
 `
   return <>
     <Typography>Nothing to explain here.</Typography>
@@ -18,7 +22,7 @@ const code =`
       additionalStyle={
         {
           comment:{
-            //fontSize:'small'
+            fontSize:'small'
           }
       }
     } commentTagProvider={(tagName)=> {

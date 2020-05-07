@@ -1,4 +1,4 @@
-import {createCommentTagInterceptor, PropsPrecedence} from '../../src/interceptors/commentTagInterceptor/interceptor';
+import {createCommentTagInterceptor, PropsPrecedence} from '../../../src/interceptors/commentTagInterceptor/interceptor';
 import { RenderNode, NodeRenderDetails, ElementNode } from 'react-syntax-highlighter-renderer-interceptor';
 import * as React from "react";
 

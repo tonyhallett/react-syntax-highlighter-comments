@@ -1,7 +1,9 @@
 import { ComponentProvider } from "./interceptor";
 import { commentComponents } from "./comment-components";
-import {generateStylePropAwareComponentsInternal, DisplayReactFCObject} from "./helpersInternal"
-export { DisplayReactFCObject} from './helpersInternal'
+import {generateStylePropAwareComponentsInternal} from "./helpersInternal"
+import { DisplayReactFCObject } from "./DisplayReactFCObject";
+import { createComponentFinder, createComponentProvider } from "./createComponentProvider";
+export { DisplayReactFCObject} from './DisplayReactFCObject'
 
 // todo - resolve <T extends {[key:string]:React.CSSProperties}>
 export function generateStylePropAwareComponents<T extends {[key:string]:Record<string,any>}>(componentDetails:T,span=true):DisplayReactFCObject<T>{
@@ -9,7 +11,5 @@ export function generateStylePropAwareComponents<T extends {[key:string]:Record<
 }
 
 
-export const builtInComponentProvider: ComponentProvider = tagName => {
-  return builtInComponentFinder(tagName);
-}
-export const builtInComponentFinder = ( tagName:string) => commentComponents.find(ct=>ct.displayName === tagName) as any;
+export const builtInComponentProvider: ComponentProvider = createComponentProvider(commentComponents);
+export const builtInComponentFinder = createComponentFinder(commentComponents);

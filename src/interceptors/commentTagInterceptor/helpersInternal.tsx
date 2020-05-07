@@ -1,10 +1,6 @@
 import * as React from "react";
 import { CommentTagProps } from "./interceptor";
-
-export type DisplayReactFCObject<T> = {
-  readonly [P in keyof T]: React.FC<{style?:React.CSSProperties}>&{displayName:string};
-}
-
+import { DisplayReactFCObject } from "./DisplayReactFCObject";
 
 export function generateStylePropAwareComponentsInternal<T extends {[key:string]:Record<string,any>}>(componentDetails:T,span=true,acceptsMergeStyle=true,mergeStyleToChildren=true):DisplayReactFCObject<T>{
   type ReturnType = DisplayReactFCObject<typeof componentDetails>
@@ -26,7 +22,21 @@ export function generateStylePropAwareComponentsInternal<T extends {[key:string]
           mergeStyle={}
         }
         const baseStyle:React.CSSProperties = respectStyleProp && commentStyleProp?commentStyleProp:{};
-        const actualStyle = {...baseStyle,...mergeStyle,...style,...componentStyle}
+        const actualStyle = {...baseStyle,...mergeStyle,...style,...componentStyle};
+
+        const childrenType = typeof children;
+        if(childrenType !== 'string' && mergeStyleToChildren){
+          const childrenWithMergedStyle = React.Children.map(children,c => {
+            const child = c as any;
+            if(child && child.type.acceptsMergeStyle){
+              return React.cloneElement(child,{mergeStyle:{...mergeStyle,...style,...componentStyle}})
+            }
+            return c;
+          });
+          return <span style={actualStyle}>{childrenWithMergedStyle}</span>
+        }
+        
+        
         if(span){
           return <span style={actualStyle}>{children?children:''}</span>
         }

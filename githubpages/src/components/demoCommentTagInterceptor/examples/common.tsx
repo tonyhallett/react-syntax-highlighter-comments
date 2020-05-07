@@ -43,12 +43,4 @@ export const ExampleCode:React.FC<{additionalStyle?:Record<string,React.CSSPrope
     }/>
 }
 
-export const createOnlyComponentProvider = (only:any) => {
-  const componentProvider: ComponentProvider = ( tagName ) => {
-    if(only.displayName === tagName){
-      return only;
-    }
-    throw new Error();
-  }
-  return componentProvider;
-}
+

@@ -43,8 +43,7 @@ function wrapComponent(htmlElement) {
         }
         return null;
     };
-    var capitalizedName = htmlElement.substr(0, 1).toUpperCase() + htmlElement.substr(1);
-    Component.displayName = capitalizedName;
+    Component.displayName = htmlElement;
     Component.acceptsMergeStyle = true;
     return Component;
 }

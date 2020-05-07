@@ -23,20 +23,19 @@ var colorNames_1 = require("../../../helpers/colorNames");
 exports.Coloured = function (_a) {
     var commentDisplay = _a.commentDisplay, color = _a.color, children = _a.children, commentStyleProp = _a.commentStyleProp, respectStyleProp = _a.respectStyleProp, style = _a.style;
     if (commentDisplay) {
-        var childrenType = typeof children;
-        if (childrenType !== 'string') {
-            var childrenWithColor = React.Children.map(children, function (c) {
-                var child = c;
-                if (child && child.type.acceptsMergeStyle) {
-                    return React.cloneElement(child, { mergeStyle: { color: color } });
-                }
-                return c;
-            });
-            return React.createElement("span", { style: { color: color } }, childrenWithColor);
-        }
         var baseStyle = respectStyleProp && commentStyleProp ? commentStyleProp : {};
         var actualStyle = __assign(__assign({}, baseStyle), style);
         actualStyle.color = color;
+        if (typeof children !== 'string') {
+            var childrenWithColor = React.Children.map(children, function (c) {
+                var child = c;
+                if (child && child.type.acceptsMergeStyle) {
+                    return React.cloneElement(child, { mergeStyle: __assign(__assign({}, style), { color: color }) });
+                }
+                return c;
+            });
+            return React.createElement("span", { style: actualStyle }, childrenWithColor);
+        }
         return React.createElement("span", { style: actualStyle }, children ? children : '');
     }
     return null;
@@ -44,9 +43,8 @@ exports.Coloured = function (_a) {
 exports.Coloured.displayName = 'Coloured';
 exports.ColorNameComponents = {};
 Object.keys(colorNames_1.colorNamesObject).forEach(function (colorName) {
-    var Component = function (_a) {
-        var display = _a.commentDisplay, children = _a.children, commentStyle = _a.commentStyleProp, respectStyleProp = _a.respectStyleProp, style = _a.style;
-        return React.createElement(exports.Coloured, { style: style, commentDisplay: display, commentStyleProp: commentStyle, respectStyleProp: respectStyleProp, color: colorNames_1.colorNamesObject[colorName] }, children);
+    var Component = function (props) {
+        return React.createElement(exports.Coloured, __assign({}, props, { color: colorNames_1.colorNamesObject[colorName] }), props.children);
     };
     Component.displayName = colorName;
     exports.ColorNameComponents[colorName] = Component;

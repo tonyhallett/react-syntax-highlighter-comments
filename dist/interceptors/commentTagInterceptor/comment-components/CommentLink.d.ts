@@ -1,6 +1,7 @@
 import * as React from "react";
 import { CommentTagType } from "./common";
+declare type LinkProps = React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>;
 export declare const CommentLink: CommentTagType<{
-    linkProps?: any;
     linkStyleProp?: React.CSSProperties;
-}>;
+} & LinkProps>;
+export {};

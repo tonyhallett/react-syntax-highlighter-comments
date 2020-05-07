@@ -36,6 +36,17 @@ function generateStylePropAwareComponentsInternal(componentDetails, span, accept
                 }
                 var baseStyle = respectStyleProp && commentStyleProp ? commentStyleProp : {};
                 var actualStyle = __assign(__assign(__assign(__assign({}, baseStyle), mergeStyle), style), componentStyle);
+                var childrenType = typeof children;
+                if (childrenType !== 'string' && mergeStyleToChildren) {
+                    var childrenWithMergedStyle = React.Children.map(children, function (c) {
+                        var child = c;
+                        if (child && child.type.acceptsMergeStyle) {
+                            return React.cloneElement(child, { mergeStyle: __assign(__assign(__assign({}, mergeStyle), style), componentStyle) });
+                        }
+                        return c;
+                    });
+                    return React.createElement("span", { style: actualStyle }, childrenWithMergedStyle);
+                }
                 if (span) {
                     return React.createElement("span", { style: actualStyle }, children ? children : '');
                 }

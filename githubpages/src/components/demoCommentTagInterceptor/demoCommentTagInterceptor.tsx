@@ -3,6 +3,8 @@ import Typography from '@material-ui/core/Typography';
 import { ComponentApi, InterceptorApi, Expandable } from "../common";
 import { DemoCommentReactIcon } from "./examples/demoCommentReactIcon";
 import { TestStyles } from "./examples/testStyles";
+import { DemoFontComponents } from "./examples/demoFontComponents";
+import { DemoCreateCommentProvider } from "./examples/demoCreateCommentProvider";
 
 function getInitialCode(){
   return `
@@ -248,21 +250,14 @@ return <ComponentApi>{props}</ComponentApi>
 function Demos(){
   return <Expandable header='Demos'>
     <>
-      <TestStyles/>
-      {/* <BuiltInComponentsDemos/> */}
+      {/* <TestStyles/> */}
+      <DemoCreateCommentProvider/>
+      <DemoCommentReactIcon/>
+      <DemoFontComponents/>
     </>
     </Expandable>
 }
-function BuiltInComponentsDemos(){
-  return <Expandable header='Built in components'>
-    <>
-      <Expandable header='CommentReactIcon'>
-        <DemoCommentReactIcon/>
-      </Expandable>
-      
-    </>
-  </Expandable>
-}
+
 
 export function DemoCommentTagInterceptor(){
   return <>
