@@ -2,7 +2,7 @@ All interceptors and stylers work well with a TextArea for demonstration purpose
 
 From the component readme !
 
-![alt text](README-assets\images\SyntaxHighlighterComments.png "SyntaxHighlighterComments")
+![alt text](README-assets/images/SyntaxHighlighterComments.png "SyntaxHighlighterComments")
 
 ```tsx
 import * as React from 'react';
