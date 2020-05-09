@@ -16,7 +16,7 @@
     "watch-compile-with-pages": "./node_modules/.bin/tsc-watch --build --onSuccess \"npm run build-githubpages\"",
     "clean": "ts-node scripts/clean",
     "generate-textdecoration": "ts-node scripts/generateTextDecoration.ts",
-    "generate-readme": "node node_modules/react-readme/dist/script",
+    "generate-readme": "node node_modules/react-readme/dist/script"
   },
   "author": "",
   "license": "ISC",
