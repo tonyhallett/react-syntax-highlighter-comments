@@ -37,7 +37,7 @@
     "jest": "^25.2.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-readme": "^1.0.1",
+    "react-readme": "^1.0.4",
     "react-syntax-highlighter": "^12.2.1",
     "react-syntax-highlighter-editable": "^1.0.0",
     "repng": "^4.0.1",
