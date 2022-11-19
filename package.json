@@ -48,7 +48,7 @@
     "tsc-watch": "^4.2.3",
     "typescript": "^3.8.3",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "string-object-to-object": "^1.0.2"
